@@ -29,13 +29,13 @@ function Homepage() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src='src\assets\lib\terror-background.jpg ' className="d-block w-100" alt="..." />
+            <img src='src\assets\lib\terror-background.jpg' className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
             <img src="src\assets\lib\terror3.jpg" className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
-            <img src="..." className="d-block w-100" alt="..." />
+            <img src="src\assets\lib\terror-background.jpg" className="d-block w-100" alt="..." />
           </div>
         </div>
         <button 

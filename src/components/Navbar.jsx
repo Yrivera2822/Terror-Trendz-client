@@ -6,9 +6,9 @@ function Navbar() {
     <nav>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link to="/" className="navbar-brand">
           <img src="src\assets\lib\Nav-Terror-Logo.png" alt="Logo" style={{height: '100px'}} />
-          </a>
+          </Link>
 
           <button 
             className="navbar-toggler" 
