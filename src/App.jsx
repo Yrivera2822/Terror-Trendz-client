@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./Pages/About";
 import Hats from "./Pages/Hats";
+import Tshirts from "./Pages/Tshirts";
 import NotFound from "./Pages/NotFound";
 import Jewelry from "./Pages/Jewelry";
 import "./App.css";
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/hats" element={<Hats />} />
+        <Route path="/tshirts" element={<Tshirts />} />
         <Route path="/about" element={<About />} />
         <Route path="/jewelry" element={<Jewelry />} />
         <Route path="*" element={<NotFound />} />
