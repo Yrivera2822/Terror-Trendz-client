@@ -68,60 +68,60 @@ function AddMusic() {
 
   return (
     <div className="add-music-container">
+      
       <form
         onSubmit={handleSubmit}
-        className="m-50 d-flex flex-wrap align-items-left gap-5"
-      >
-        {/* <div> className="mb-50 align-center" */}
-        {/* </div> */}
-        {/* <div className="mb-50"> */}
+        className="m-50 d-flex flex-wrap align-items-left gap-5"/>
+        
+        <div className="mb-50">
         <label for="artistName" className="form-label"></label>
         <input
           type="text"
           placeholder="Artist"
           className="form-control"
           name="artistName"
-          onChange={handleArtistChange}
-        />
-        {/* </div> */}
-        {/* <div className="mb-50"> */}
+          onChange={handleArtistChange}/>
+        </div>
+       
+        <div className="mb-50">
         <label for="songTitle" className="form-label"></label>
         <input
           type="text"
           placeholder="Song Title"
           className="form-control"
           name="songTitle"
-          onChange={handleTitleChange}
-        />
-        {/* </div> */}
-        {/* <div className="m-50"> */}
+          onChange={handleTitleChange}/>
+        </div>
+       
+        <div className="m-50">
         <label for="youTubeUrl" className="form-label"></label>
         <input
           type="url"
           placeholder="Youtube Link"
           className="form-control"
           name="youTubeUrl"
-          onChange={handleYouTubeChange}
-        />
-
-        {/* </div> */}
-        {/* <div className="m-50"> */}
+          onChange={handleYouTubeChange}/>
+        </div>
+       
+        <div className="m-50">
         <label for="commentBox" className="form-label"></label>
         <input
           type="text"
           placeholder="leave a comment"
           className="form-control"
           name="commentBox"
-          onChange={handleNewCommentChange}
-        />
-        {/* </div> */}
+          onChange={handleNewCommentChange}/>
+        </div>
 
         <button type="submit" className="btn btn-primary">
           Submit
         </button>
+    
       </form>
-    </div>
-  );
+      
+      </div>
+  )
+
 }
 
 export default AddMusic;
