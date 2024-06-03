@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./Pages/About";
@@ -16,7 +15,7 @@ function App() {
     <div>
       <Navbar />
       <Footer />
-      
+
       <h1>Welcome to Terror Trendz! appjsx</h1>
 
       <Routes>
