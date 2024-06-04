@@ -1,6 +1,7 @@
 import ReactPlayer from "react-player/youtube";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Navigate } from "react-router-dom";
 import navigate from "navigate";
 
 function AddMusic() {
@@ -71,12 +72,12 @@ function AddMusic() {
     e.preventDefault();
 
     axios
-    .delete(`https://cats-dogs-abner.adaptable.app/music}`)
-    .then(() => {
-      navigate("/");
-    })
-    .catch((error) => console.log (error));
-  } 
+      .delete(`https://cats-dogs-abner.adaptable.app/music}`)
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => console.log(error));
+  };
 
   return (
     <div className="add-music-container">
@@ -132,8 +133,9 @@ function AddMusic() {
           Submit
         </button>
 
-        <button className="btn btn-primary" onClick={deleteVideo}>Delete Project</button>
-
+        <button className="btn btn-primary" onClick={deleteVideo}>
+          Delete Project
+        </button>
       </form>
     </div>
   );
