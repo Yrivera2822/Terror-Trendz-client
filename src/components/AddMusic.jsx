@@ -134,7 +134,7 @@ function AddMusic() {
         </button>
 
         <button className="btn btn-primary" onClick={deleteVideo}>
-          Delete Project
+          Delete Video
         </button>
       </form>
     </div>
