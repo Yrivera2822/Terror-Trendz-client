@@ -2,16 +2,15 @@ import ReactPlayer from "react-player/youtube";
 import { useState, useEffect, useNavigate } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import EditMusic from "./EditMusic";
 
 function AddMusic() {
+
   const [musicArray, setMusicArray] = useState(null);
-  // set state de las canciones para guardar en la memoria lo capturado por el formulario
   const [newArtist, setNewArtist] = useState("");
   const [newSong, setNewSong] = useState("");
   const [newYouTube, setNewYouTube] = useState("");
   const [newComment, setNewComment] = useState("");
-
-  // esto es pa probar.
   const [videoTest, setVideoTest] = useState("");
 
   const handleSubmit = async (e) => {
@@ -75,19 +74,20 @@ function AddMusic() {
     console.log("this is changing the comments", newComment);
   };
 
-  const handleDeleteVideo = async (id) => {
+  // this is where the delete is happening
+  // id  and songName parameters are needed to handle the delete in the form below
+  const handleDeleteVideo = async (id, songName, songArtist) => {
     try {
       const confirmed = confirm(
-        "Are you sure you want to delete?"
+        (`Are you sure you want to delete?`)
       );
       if (confirmed){
         const response = await axios.delete(
           `https://cats-dogs-abner.adaptable.app/music/${id}`
         );
         if (response.status === 200){
-          toast.success(`${artistName} was successfully deleted!`);
-          setMusicArray()
-          // navigate(-1);
+          toast.success(`${songName} was successfully deleted!`);
+          getMusic();
         }
       }
     } catch (error) {
@@ -95,29 +95,9 @@ function AddMusic() {
     }
   };
 
-      
+const editInfo = {
 
-  const handleEditVideo = async (videoId, updatedData) => {
-    try {
-      const confirmed = window.confirm("Edit that video");
-      if (confirmed) {
-        const response = await axios.put(`https://cats-dogs-abner.adaptable.app/music/${id}`, updatedData);
-        console.log(response.data); 
-      }
-
-        else {
-          console.log("Edit operation cancelled.");
-    
-        } catch (error) {
-          console.log(error);
 }
-    };
-  }
-
-{
-    // e.preventDefault();
-
-
 
   return (
     <div className="add-music-container">
@@ -128,7 +108,7 @@ function AddMusic() {
       <form
         onSubmit={handleSubmit}
         className="p-5 d-flex flex-wrap align-items-left gap-5"
-      >
+        >
         <div className="mb-3">
           <label for="artistName" className="form-label"></label>
           <input
@@ -180,9 +160,12 @@ function AddMusic() {
           </button>
         </div>
       </form>
+
+     
+
       <ul className="list-group list-group-numbered">
         {musicArray ? (
-          musicArray.map((song) => (
+          musicArray.map((song, index) => (
             <div>
               <li
                 className={`list-group-item ${
@@ -190,9 +173,10 @@ function AddMusic() {
                 } d-flex justify-content-between align-items-start`}
                 aria-current={song.id === videoTest.id}
               >
-               <span className="fw-bold">{song.artistName}</span> {song.songTitle}
-                <span className="btn btn-warning gap-5 m-1"> edit</span>
-                <span className="btn btn-danger gap-5 m-1" onClick={handleDeleteVideo}>delete</span>
+               <span className="fw-bold">{song.artistName}</span> <span>{song.songTitle}</span>
+                {/* <span className="btn btn-warning gap-5 m-1"onClick={() => handleEditVideo(song.id, song.songTitle, song.songComment, song.artistName, song.songYouTubeUrl )}> edit</span> */}
+{ <EditMusic handleSubmit={handleSubmit} songId={song.id} songTitle={song.songTitle} songComment={song.commentBox} songArtist={song.artistName} songUrl={song.youTubeUrl} />}
+                <span className="btn btn-danger gap-5 m-1" onClick={() => handleDeleteVideo(song.id, song.songTitle )}>delete</span>
               </li>
             </div>
           ))
@@ -203,6 +187,8 @@ function AddMusic() {
     </div>
   );
 }
-}
+  
+
+
 
 export default AddMusic;

@@ -60,7 +60,7 @@ function Homepage() {
     // </div>
     
     <div> <AddMusic />
-    {/* <ReactPlayer url='https://www.youtube.com/watch?v=LXb3EKWsInQ' /> */}
+
     </div>
   );
 }
