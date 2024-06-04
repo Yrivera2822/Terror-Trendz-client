@@ -1,10 +1,10 @@
 import ReactPlayer from "react-player/youtube";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useNavigate } from "react";
 import axios from "axios";
-import { Navigate } from "react-router-dom";
-import navigate from "navigate";
+import toast from "react-hot-toast";
 
 function AddMusic() {
+  const [musicArray, setMusicArray] = useState(null);
   // set state de las canciones para guardar en la memoria lo capturado por el formulario
   const [newArtist, setNewArtist] = useState("");
   const [newSong, setNewSong] = useState("");
@@ -17,10 +17,10 @@ function AddMusic() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newVideo = {
-      newArtist,
-      newSong,
-      newYouTube,
-      newComment,
+      artistName: newArtist,
+      songTitle: newSong,
+      youTubeUrl: newYouTube,
+      commentBox: newComment,
     };
     try {
       const response = await axios.post(
@@ -33,20 +33,27 @@ function AddMusic() {
     }
   };
 
-  const getMusic = () => {
-    axios
-      .get("https://cats-dogs-abner.adaptable.app/music")
-      .then((response) => {
-        console.log("Music API fetch request ====>", response.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  const getMusic = async () => {
+    try {
+      const response = await axios.get(
+        "https://cats-dogs-abner.adaptable.app/music"
+      );
+
+      console.log(response);
+      setMusicArray(response.data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
     getMusic();
-  }, [videoTest]);
+  }, []);
+
+  useEffect(() => {
+    musicArray &&
+      setVideoTest(musicArray[Math.floor(Math.random() * musicArray.length)]);
+  }, [musicArray]);
 
   const handleArtistChange = (e) => {
     setNewArtist(e.target.value);
@@ -68,22 +75,59 @@ function AddMusic() {
     console.log("this is changing the comments", newComment);
   };
 
-  const deleteVideo = () => {
-    e.preventDefault();
-
-    axios
-      .delete(`https://cats-dogs-abner.adaptable.app/music}`)
-      .then(() => {
-        navigate("/");
-      })
-      .catch((error) => console.log(error));
+  const handleDeleteVideo = async (id) => {
+    try {
+      const confirmed = confirm(
+        "Are you sure you want to delete?"
+      );
+      if (confirmed){
+        const response = await axios.delete(
+          `https://cats-dogs-abner.adaptable.app/music/${id}`
+        );
+        if (response.status === 200){
+          toast.success(`${artistName} was successfully deleted!`);
+          setMusicArray()
+          // navigate(-1);
+        }
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
+
+      
+
+  const handleEditVideo = async (videoId, updatedData) => {
+    try {
+      const confirmed = window.confirm("Edit that video");
+      if (confirmed) {
+        const response = await axios.put(`https://cats-dogs-abner.adaptable.app/music/${id}`, updatedData);
+        console.log(response.data); 
+      }
+
+        else {
+          console.log("Edit operation cancelled.");
+    
+        } catch (error) {
+          console.log(error);
+}
+    };
+  }
+
+{
+    // e.preventDefault();
+
+
 
   return (
     <div className="add-music-container">
+      {videoTest && (
+        <ReactPlayer url={videoTest.youTubeUrl} controls muted playing />
+      )}
+
       <form
         onSubmit={handleSubmit}
-        className="mb-3 d-flex flex-wrap align-items-left gap-5"
+        className="p-5 d-flex flex-wrap align-items-left gap-5"
       >
         <div className="mb-3">
           <label for="artistName" className="form-label"></label>
@@ -129,16 +173,36 @@ function AddMusic() {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-
-        <button className="btn btn-primary" onClick={deleteVideo}>
-          Delete Video
-        </button>
+        <div>
+          {" "}
+          <button type="submit" className="btn btn-primary gap-5 m-1">
+            Submit Video
+          </button>
+        </div>
       </form>
+      <ul className="list-group list-group-numbered">
+        {musicArray ? (
+          musicArray.map((song) => (
+            <div>
+              <li
+                className={`list-group-item ${
+                  song.id === videoTest.id && "active"
+                } d-flex justify-content-between align-items-start`}
+                aria-current={song.id === videoTest.id}
+              >
+               <span className="fw-bold">{song.artistName}</span> {song.songTitle}
+                <span className="btn btn-warning gap-5 m-1"> edit</span>
+                <span className="btn btn-danger gap-5 m-1" onClick={handleDeleteVideo}>delete</span>
+              </li>
+            </div>
+          ))
+        ) : (
+          <p>Loading..</p>
+        )}
+      </ul>
     </div>
   );
+}
 }
 
 export default AddMusic;

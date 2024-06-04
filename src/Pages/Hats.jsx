@@ -3,6 +3,8 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { useState } from "react";
 
 function Hats() {
+  const {Hats, setHats} = useState();
+
   return (
     <div className="d-flex flex-wrap justify-content-center align-items-center gap-5">
       <Link>

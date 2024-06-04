@@ -10,14 +10,16 @@ import "./App.css";
 import React from "react";
 import Homepage from "./Pages/Homepage";
 import { Routes, Route } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <div>
       <Navbar />
+      <Toaster />
       <Footer />
 
-      <h1>Welcome to Terror Trendz! appjsx</h1>
+      <h1>Welcome to Terror Trendz!</h1>
 
       <Routes>
         <Route path="/" element={<Homepage />} />
