@@ -17,7 +17,7 @@ function App() {
     <div>
       <Navbar />
       <Toaster />
-      <Footer />
+      
 
       <h1>Welcome to Terror Trendz!</h1>
 
@@ -29,7 +29,14 @@ function App() {
         <Route path="/jewelry" element={<Jewelry />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <div>
+      <Footer />
+
+      </div>
+     
     </div>
+    
+    
   );
 }
 

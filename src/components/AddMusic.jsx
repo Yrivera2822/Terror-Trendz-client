@@ -163,19 +163,21 @@ const editInfo = {
 
      
 
-      <ul className="list-group list-group-numbered">
+      <ul className="list-group list-group-numbered ">
         {musicArray ? (
           musicArray.map((song, index) => (
-            <div>
+            <div className="" style={{width: "70vw"}}>
               <li
                 className={`list-group-item ${
                   song.id === videoTest.id && "active"
-                } d-flex justify-content-between align-items-start`}
+                } d-flex justify-content-between align-items-start text-center`}
                 aria-current={song.id === videoTest.id}
               >
                <span className="fw-bold">{song.artistName}</span> <span>{song.songTitle}</span>
+               
+               <EditMusic song={song} index={index} getMusic={getMusic}/>
                 {/* <span className="btn btn-warning gap-5 m-1"onClick={() => handleEditVideo(song.id, song.songTitle, song.songComment, song.artistName, song.songYouTubeUrl )}> edit</span> */}
-{ <EditMusic handleSubmit={handleSubmit} songId={song.id} songTitle={song.songTitle} songComment={song.commentBox} songArtist={song.artistName} songUrl={song.youTubeUrl} />}
+{/* { <EditMusic handleSubmit={handleSubmit} songId={song.id} songTitle={song.songTitle} songComment={song.commentBox} songArtist={song.artistName} songUrl={song.youTubeUrl} />} */}
                 <span className="btn btn-danger gap-5 m-1" onClick={() => handleDeleteVideo(song.id, song.songTitle )}>delete</span>
               </li>
             </div>
