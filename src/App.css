@@ -1,3 +1,58 @@
-body {
-    background-color: slategray !important;
+
+  p {
+    font-family: sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  h1 {
+    font-family: sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  .button {
+    font-family: sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  .footer-container {
+  position: inherit;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding:50px;
+}
+
+.img-fluid {
+  width: 500px;
+  height: 300px;
+}
+
+footer {
+  background-color: #F4F80E !important;
+  display: flex;
+  flex-direction: row;
+  padding-left: 75px;
+  max-height: max-content ; 
+}
+
+.footer-content {
+  padding-left: 100px ;
+  padding-left: 100px;
+  margin-top: 40px;
+  margin-right: 200px;
+}
+
+.background{
+background-image: url("https://res.cloudinary.com/dlbhhobaw/image/upload/v1717622101/Terror-Background_jdtcwt.jpg") ;
+background-size: contain;
+max-height: 1700px;
+
+}
+
+.scroll {
+    max-height: 100px;
+    overflow-y: auto;
 }

@@ -3,6 +3,7 @@ import AddMusic from '../components/AddMusic';
 
 function Homepage() {
   return (
+    
     // <div>
     //   <div id="carouselExampleIndicators" className="carousel slide">
     //     <div className="carousel-indicators">
@@ -58,8 +59,11 @@ function Homepage() {
     //     </button>
     //   </div>
     // </div>
+
+    <div className="background">
+    <AddMusic />
     
-    <div> <AddMusic />
+    {/* <img src="src\assets\lib\terror-background.jpg" /> */}
 
     </div>
   );

@@ -57,7 +57,7 @@ function EditMusic({ song, index, getMusic }) {
     <>
       <button
         type="button"
-        className="btn btn-primary"
+        className="btn btn-warning"
         data-bs-toggle="collapse"
         data-bs-target={"#editForm" + index}
         aria-controls={"#editForm" + index}
@@ -70,7 +70,6 @@ function EditMusic({ song, index, getMusic }) {
           onSubmit={handleEditSubmit}
           className="p-5 d-flex flex-wrap align-items-left gap-5 "
         >
-          <h2> Edit Song! </h2>
           <div className="mb-3">
             <label for="artistName" className="form-label"></label>
             <input

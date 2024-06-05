@@ -5,7 +5,6 @@ import About from "./Pages/About";
 import Hats from "./Pages/Hats";
 import Tshirts from "./Pages/Tshirts";
 import NotFound from "./Pages/NotFound";
-import Jewelry from "./Pages/Jewelry";
 import "./App.css";
 import React from "react";
 import Homepage from "./Pages/Homepage";
@@ -19,14 +18,13 @@ function App() {
       <Toaster />
       
 
-      <h1>Welcome to Terror Trendz!</h1>
+      {/* <h1>Welcome to Terror Trendz!</h1> */}
 
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/hats" element={<Hats />} />
         <Route path="/tshirts" element={<Tshirts />} />
         <Route path="/about" element={<About />} />
-        <Route path="/jewelry" element={<Jewelry />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <div>

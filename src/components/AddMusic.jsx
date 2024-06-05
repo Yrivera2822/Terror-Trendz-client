@@ -100,16 +100,16 @@ const editInfo = {
 }
 
   return (
-    <div className="add-music-container">
+    <div className="addMusicContainer">
+    <div className=" container-sm p-5">
       {videoTest && (
         <ReactPlayer url={videoTest.youTubeUrl} controls muted playing />
       )}
 
       <form
         onSubmit={handleSubmit}
-        className="p-5 d-flex flex-wrap align-items-left gap-5"
-        >
-        <div className="mb-3">
+        className="p-1" style={{width: "20vw"}} >
+        <div className="mb-1">
           <label for="artistName" className="form-label"></label>
           <input
             type="text"
@@ -120,7 +120,7 @@ const editInfo = {
           />
         </div>
 
-        <div className="mb-3">
+        <div className="mb-1">
           <label for="songTitle" className="form-label"></label>
           <input
             type="text"
@@ -131,7 +131,7 @@ const editInfo = {
           />
         </div>
 
-        <div className="mb-3">
+        <div className="mb-1">
           <label for="youTubeUrl" className="form-label"></label>
           <input
             type="url"
@@ -155,7 +155,7 @@ const editInfo = {
 
         <div>
           {" "}
-          <button type="submit" className="btn btn-primary gap-5 m-1">
+          <button type="submit" className="mb-3 btn btn-primary">
             Submit Video
           </button>
         </div>
@@ -163,14 +163,14 @@ const editInfo = {
 
      
 
-      <ul className="list-group list-group-numbered ">
+      <ul className="list-group container-sm overflow-auto bg-">
         {musicArray ? (
           musicArray.map((song, index) => (
-            <div className="" style={{width: "70vw"}}>
+            <div className="" style={{width: "20vw"}}>
               <li
                 className={`list-group-item ${
                   song.id === videoTest.id && "active"
-                } d-flex justify-content-between align-items-start text-center`}
+                } d-flex justify-content-between`}
                 aria-current={song.id === videoTest.id}
               >
                <span className="fw-bold">{song.artistName}</span> <span>{song.songTitle}</span>
@@ -183,9 +183,10 @@ const editInfo = {
             </div>
           ))
         ) : (
-          <p>Loading..</p>
+          <p>Loading...</p>
         )}
       </ul>
+    </div>
     </div>
   );
 }

@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <>
+      <nav className="navbar navbar-expand-lg bg-warning">
         <div className="container-fluid">
-          <Link to="/" className="navbar-brand">
-          <img src="src\assets\lib\Nav-Terror-Logo.png" alt="Logo" style={{height: '100px'}} />
+          <Link to="https://www.instagram.com/terror.trendz/" target="_blank" className="navbar-brand">
+          <img src="src\assets\lib\Nav-Terror-Logo.png" alt="Logo" style={{height: '150px'}} />
           </Link>
 
           <button 
@@ -31,7 +31,6 @@ function Navbar() {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><Link className="dropdown-item" to="/tshirts">Tshirts</Link></li>
-                  <li><Link className="dropdown-item" to="/jewelry">Jewelry</Link></li>
                   <li><Link className="dropdown-item" to="/hats">Hats</Link></li>
                 </ul>
               </li>
@@ -42,7 +41,7 @@ function Navbar() {
           </div>
         </div>
       </nav>
-    </nav>
+    </>
   );
 }
 
