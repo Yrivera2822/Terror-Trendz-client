@@ -3,9 +3,9 @@
 }
 
 .navbar {
+    font-family: "pf-venue", sans-serif;
     font-size: 25px;
     font-weight: 700;
-    color: #ff00ff;
 }
 
 p {

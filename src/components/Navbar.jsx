@@ -25,6 +25,7 @@ function Navbar() {
               <li className="nav-item">
                 <Link className="nav-link active text-primary ps-5 " href="#" aria-current="page" to="/">Homepage</Link>
               </li>
+              <a class="icon-link icon-link-hover" href="#">
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle text-primary ps-5" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Products
