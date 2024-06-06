@@ -1,5 +1,10 @@
+.navbar {
+    font-size: 25px;
+    font-weight: 700;
+    color: #ff00ff;
+}
 
-  p {
+p {
     font-family: sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -39,16 +44,35 @@ footer {
 }
 
 .footer-content {
-  padding-left: 100px ;
-  padding-left: 100px;
-  margin-top: 40px;
-  margin-right: 200px;
+  padding-left: 90px ;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  color:rgb(80, 117, 228)
+ }
+.social-media{
+  padding-left: 150px;
+}
+.T-logo{
+  height: 50px;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+.footer-top {
+  background-color: black;
+  color:#FFC107
+  
+}
+
+.follow-us {
+
 }
 
 .background{
 background-image: url("https://res.cloudinary.com/dlbhhobaw/image/upload/v1717622101/Terror-Background_jdtcwt.jpg") ;
 background-size: contain;
-max-height: 1700px;
+max-height: 2000px;
+background-color: lightyellow !important;
 
 }
 
@@ -56,3 +80,4 @@ max-height: 1700px;
     max-height: 100px;
     overflow-y: auto;
 }
+

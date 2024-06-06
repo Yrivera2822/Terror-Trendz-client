@@ -5,7 +5,6 @@ import toast from "react-hot-toast";
 import EditMusic from "./EditMusic";
 
 function AddMusic() {
-
   const [musicArray, setMusicArray] = useState(null);
   const [newArtist, setNewArtist] = useState("");
   const [newSong, setNewSong] = useState("");
@@ -78,14 +77,12 @@ function AddMusic() {
   // id  and songName parameters are needed to handle the delete in the form below
   const handleDeleteVideo = async (id, songName, songArtist) => {
     try {
-      const confirmed = confirm(
-        (`Are you sure you want to delete?`)
-      );
-      if (confirmed){
+      const confirmed = confirm(`Are you sure you want to delete?`);
+      if (confirmed) {
         const response = await axios.delete(
           `https://cats-dogs-abner.adaptable.app/music/${id}`
         );
-        if (response.status === 200){
+        if (response.status === 200) {
           toast.success(`${songName} was successfully deleted!`);
           getMusic();
         }
@@ -95,20 +92,13 @@ function AddMusic() {
     }
   };
 
-const editInfo = {
-
-}
-
   return (
-    <div className="addMusicContainer">
-    <div className=" container-sm p-5">
+    <div className=" addMusicContainer container-sm p-5">
       {videoTest && (
         <ReactPlayer url={videoTest.youTubeUrl} controls muted playing />
       )}
 
-      <form
-        onSubmit={handleSubmit}
-        className="p-1" style={{width: "20vw"}} >
+      <form onSubmit={handleSubmit} className="p-1" style={{ width: "25vw" }}>
         <div className="mb-1">
           <label for="artistName" className="form-label"></label>
           <input
@@ -161,24 +151,25 @@ const editInfo = {
         </div>
       </form>
 
-     
-
-      <ul className="list-group container-sm overflow-auto bg-">
+      <ul className="list-group container-sm">
         {musicArray ? (
           musicArray.map((song, index) => (
-            <div className="" style={{width: "20vw"}}>
+            <div className="" style={{ width: "25vw" }}>
               <li
                 className={`list-group-item ${
                   song.id === videoTest.id && "active"
                 } d-flex justify-content-between`}
                 aria-current={song.id === videoTest.id}
               >
-               <span className="fw-bold">{song.artistName}</span> <span>{song.songTitle}</span>
-               
-               <EditMusic song={song} index={index} getMusic={getMusic}/>
-                {/* <span className="btn btn-warning gap-5 m-1"onClick={() => handleEditVideo(song.id, song.songTitle, song.songComment, song.artistName, song.songYouTubeUrl )}> edit</span> */}
-{/* { <EditMusic handleSubmit={handleSubmit} songId={song.id} songTitle={song.songTitle} songComment={song.commentBox} songArtist={song.artistName} songUrl={song.youTubeUrl} />} */}
-                <span className="btn btn-danger gap-5 m-1" onClick={() => handleDeleteVideo(song.id, song.songTitle )}>delete</span>
+                <span className="fw-bold">{song.artistName}</span>{" "}
+                <span>{song.songTitle}</span>
+                <EditMusic song={song} index={index} getMusic={getMusic} />
+                <span
+                  className="btn btn-danger gap-5 m-1"
+                  onClick={() => handleDeleteVideo(song.id, song.songTitle)}
+                >
+                  delete
+                </span>
               </li>
             </div>
           ))
@@ -187,11 +178,14 @@ const editInfo = {
         )}
       </ul>
     </div>
-    </div>
   );
 }
-  
-
-
 
 export default AddMusic;
+
+{
+  /* <span className="btn btn-warning gap-5 m-1"onClick={() => handleEditVideo(song.id, song.songTitle, song.songComment, song.artistName, song.songYouTubeUrl )}> edit</span> */
+}
+{
+  /* { <EditMusic handleSubmit={handleSubmit} songId={song.id} songTitle={song.songTitle} songComment={song.commentBox} songArtist={song.artistName} songUrl={song.youTubeUrl} />} */
+}

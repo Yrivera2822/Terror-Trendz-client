@@ -23,11 +23,11 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">Homepage</Link>
+                <Link className="nav-link active text-primary  " aria-current="page" to="/">Homepage</Link>
               </li>
               <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  See products
+                <a className="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><Link className="dropdown-item" to="/tshirts">Tshirts</Link></li>
@@ -35,7 +35,7 @@ function Navbar() {
                 </ul>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/about">About</Link>
+                <Link className="nav-link active text-primary" aria-current="page" to="/about">About</Link>
               </li>
             </ul>
           </div>

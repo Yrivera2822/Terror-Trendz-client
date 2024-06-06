@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 const arrHats = [
   "https://www.mammothheadwear.com/cdn/shop/products/2_e2042dde-4c9f-4eb8-b8fe-a652b123e499.jpg?v=1679965162",
   "https://www.mammothheadwear.com/cdn/shop/products/Brown1.jpg?v=1620087568",
+  "https://res.cloudinary.com/dlbhhobaw/image/upload/v1717625996/311138262_771000427298960_644398564849037067_n_u6sjs2.jpg",
 ];
 <p> hats </p>;
 
@@ -28,27 +29,28 @@ function Hats() {
 
   return (
     <>
-      <h1 className=" p-3 text-center">Hats</h1>
-      <div className="d-inline-flex flex-wrap p-2 justify-content-center w-100 container-fluid">
+      <h1 className=" p-5 text-left">Hats</h1>
+      <div className="d-inline-flex flex-wrap p-2">
         {hats &&
           hats.map((hat, i) => {
             return (
               <div key={i}>
                 <div
-                  className="card m-3 p-3 justify-content-center"
+                  className="card m-3 p-3"
                   style={{ width: "24rem", height: "auto" }}
                 >
-                  <div className="card-body justify-content-center">
+                  <div className="card-body">
                     <img
-                      src={arrHats[Math.floor(Math.random() * arrHats.length)]}
+                      src={hat.url}
+                      className="object-fit-contain"
                       style={{ height: "20rem" }}
                       alt={"image of" + hat.title}
                     />
                     <h2 className="card-title mt-2">{hat.title}</h2>
                     <h6 className="card-subtitle mb-3 text-muted">
-                      <p>{hat.description}</p>
+                      {hat.description}
                     </h6>
-                    <h4 className="card-text">Price ${hat.price}</h4>
+                    <h4 className="card-text">Price: ${hat.price}</h4>
                   </div>
                 </div>
               </div>
@@ -60,3 +62,6 @@ function Hats() {
 }
 
 export default Hats;
+
+// this is the math for the random
+// src={arrHats[Math.floor(Math.random() * arrHats.length)]}

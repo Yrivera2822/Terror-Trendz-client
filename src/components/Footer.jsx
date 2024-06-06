@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 
 function Footer() {
   return (
-    <footer className="bg-warning">
-        {/* <div> 
+    <footer className="bg-warning fixed-bottom">
+        {/* <div className='footer-top'> 
           <p>JOIN THE TERROR CLUB NOW</p> 
         </div> */}
 
@@ -12,7 +13,7 @@ function Footer() {
    
      
         <div className="footer-content" style={{height: '100px'}} >
-          <h3>Join the Terror Club  </h3>
+          <h3>Contact us:</h3>
           <p>Email:Terrorfriends@gmail.com</p>
           <p>Phone:723-780-3903</p>
           <p>1601 Apt #201 Ave Fernandez Juncos San Juan PR.</p>
@@ -20,19 +21,23 @@ function Footer() {
 
         
         <div className="footer-content">
-          <h3>Quick Links</h3>
+           
     
-          <h3>Follow Us</h3>
+          <h3 className='follow-us'>Follow Us:</h3>
           <ul className="social-media">
-            <li>
-              <a href="">Twitter</a>
-            </li>
-            <li>
-              <a href="">Facebook</a>
-            </li>
-            <li>
-              <a href="">Instagram</a>
-            </li>
+             <Link to= "https://www.youtube.com/watch?v=xvFZjo5PgG0" target="blank">  
+            <img src="src/assets/lib/logo-black.png" className="T-logo"  alt="T-img" />
+            </Link>
+            
+            <Link to="https://www.instagram.com/terror.trendz/" target="_blank" >
+            <img src="src/assets/lib/Instagram_Glyph_Black.png" className="T-logo"  alt="T-img" />
+            </Link>
+
+            <Link to="https://www.facebook.com/people/Terror-Trendz/100088390365188/" target="blank" alt= "T-img">
+            <img src="src/assets/lib/Facebook_Logo_Secondary.png" className="T-logo"  alt="T-img" />
+            </Link>
+           
+
           </ul>
         </div>
      

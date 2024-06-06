@@ -64,6 +64,10 @@ function Homepage() {
     <AddMusic />
     
     {/* <img src="src\assets\lib\terror-background.jpg" /> */}
+    
+    <div className='footer-top'> 
+          <p>JOIN THE TERROR CLUB NOW</p> 
+        </div>
 
     </div>
   );
