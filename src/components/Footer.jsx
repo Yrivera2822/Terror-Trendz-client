@@ -9,7 +9,7 @@ function Footer() {
           <p>JOIN THE TERROR CLUB NOW</p> 
         </div> */}
 
-       <img src="src/assets/lib/arcade-fast-game-over.gif" className="img-fluid"  alt="F-img" />
+       <img src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/arcade-fast-game-over_w8nqdr.gif" className="img-fluid"  alt="F-img" />
    
      
         <div className="footer-content" style={{height: '100px'}} >
@@ -26,15 +26,15 @@ function Footer() {
           <h3 className='follow-us'>Follow Us:</h3>
           <ul className="social-media">
              <Link to= "https://www.youtube.com/watch?v=xvFZjo5PgG0" target="blank">  
-            <img src="src/assets/lib/logo-black.png" className="T-logo"  alt="T-img" />
+            <img src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/logo-black_nvbkev.png" className="T-logo"  alt="T-img" />
             </Link>
             
             <Link to="https://www.instagram.com/terror.trendz/" target="_blank" >
-            <img src="src/assets/lib/Instagram_Glyph_Black.png" className="T-logo"  alt="T-img" />
+            <img src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/Instagram_Glyph_Black_rjzxcn.png" className="T-logo"  alt="T-img" />
             </Link>
 
             <Link to="https://www.facebook.com/people/Terror-Trendz/100088390365188/" target="blank" alt= "T-img">
-            <img src="src/assets/lib/Facebook_Logo_Secondary.png" className="T-logo"  alt="T-img" />
+            <img src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/Facebook_Logo_Secondary_esdv44.png" className="T-logo"  alt="T-img" />
             </Link>
            
 

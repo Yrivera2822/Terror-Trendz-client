@@ -7,7 +7,7 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg bg-warning">
         <div className="container-fluid">
           <Link to="https://www.instagram.com/terror.trendz/" target="_blank" className="navbar-brand">
-          <img src="src\assets\lib\Nav-Terror-Logo.png" alt="Logo" style={{height: '150px'}} />
+          <img src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/Nav-Terror-Logo_nmhanx.png" alt="Logo" style={{height: '150px'}} />
           </Link>
 
           <button 
