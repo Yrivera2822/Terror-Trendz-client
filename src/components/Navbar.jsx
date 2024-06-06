@@ -23,7 +23,7 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link active text-primary ps-5" aria-current="page" to="/">Homepage</Link>
+                <Link className="nav-link active text-primary ps-5 icon-link icon-link-hover" href="#" aria-current="page" to="/">Homepage</Link>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle text-primary ps-5" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
