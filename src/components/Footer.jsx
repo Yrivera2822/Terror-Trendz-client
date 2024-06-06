@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="bg-warning float-sm-end">
+    <footer className="bg-warning">
       {/* <div className='footer-top'> 
           <p>JOIN THE TERROR CLUB NOW</p> 
         </div> */}
