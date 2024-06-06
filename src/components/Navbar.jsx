@@ -31,12 +31,12 @@ function Navbar() {
                 <a className="nav-link dropdown-toggle text-primary ps-5" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Products
                 </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <ul className="dropdown-menu icon-link icon-link-hover"  href="#" aria-labelledby="navbarDropdownMenuLink">
                   <li><Link className="dropdown-item" to="/tshirts">Tshirts</Link></li>
                   <li><Link className="dropdown-item" to="/hats">Hats</Link></li>
                 </ul>
               </li>
-              <li className="nav-item">
+              <li className="nav-item "href="#">
                 <Link className="nav-link active text-primary ps-5" aria-current="page" to="/about">About</Link>
               </li>
             </ul>
