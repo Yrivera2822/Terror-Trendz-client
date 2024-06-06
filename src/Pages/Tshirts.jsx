@@ -37,21 +37,21 @@ function Tshirts() {
             return (
               <div key={i}>
                 <div
-                  className="card m-3 p-3"
+                  className="card m-3 p-3 shadow-sm"
                   style={{ width: "24rem", height: "auto" }}
                 >
-                  <div className="card-body">
+                  <div className="card-body ">
                     <img
                       src={tshirt.url}
                       className="card-img-top npm w-lg-75 w-md-50 w-100"
                       style={{ height: "20rem" }}
                       alt={"image of" + tshirt.title}
                     />
-                    <h2 className="card-title mt-2">{tshirt.title}</h2>
-                    <h6 className="card-subtitle mb-3 text-muted">
+                    <h2 className="card-title mt-2 text-bg-danger ps-3">{tshirt.title}</h2>
+                    <h5 className="card-subtitle mb-3 ps-3">
                       {tshirt.description}
-                    </h6>
-                    <h4 className="card-text">${tshirt.price}</h4>
+                    </h5>
+                    <h3 className="card-text ps-3">${tshirt.price}</h3>
                   </div>
                 </div>
               </div>
