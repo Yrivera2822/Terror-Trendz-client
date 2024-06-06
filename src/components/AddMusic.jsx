@@ -93,7 +93,7 @@ function AddMusic() {
   };
 
   return (
-    <div className=" p-5">
+    <div className="p-5">
       {videoTest && (
         <ReactPlayer
           width="25vw"
@@ -105,9 +105,9 @@ function AddMusic() {
         />
       )}
 
-      <form onSubmit={handleSubmit} className="p-1" style={{ width: "25vw" }}>
+      <form onSubmit={handleSubmit} className="p-1 " style={{ width: "25vw" }}>
         <div className="mb-1">
-          <label for="artistName" className="form-label"></label>
+          <label for="artistName" className="form-label shadow-sm"></label>
           <input
             type="text"
             placeholder="Artist"
@@ -118,7 +118,7 @@ function AddMusic() {
         </div>
 
         <div className="mb-1">
-          <label for="songTitle" className="form-label"></label>
+          <label for="songTitle" className="form-label shadow-sm"></label>
           <input
             type="text"
             placeholder="Song Title"
@@ -129,7 +129,7 @@ function AddMusic() {
         </div>
 
         <div className="mb-1">
-          <label for="youTubeUrl" className="form-label"></label>
+          <label for="youTubeUrl" className="form-label shadow-sm"></label>
           <input
             type="url"
             placeholder="Youtube Link"
@@ -140,7 +140,7 @@ function AddMusic() {
         </div>
 
         <div className="mb-3">
-          <label for="commentBox" className="form-label"></label>
+          <label for="commentBox" className="form-label shadow-sm"></label>
           <input
             type="text"
             placeholder="leave a comment"
@@ -158,10 +158,10 @@ function AddMusic() {
         </div>
       </form>
       <h2>Music List</h2>
-      <ul className="list-group overflow-y-scroll" style={{height:"20vh"}}>
+      <ul className="list-group overflow-y-scroll " style={{height:"20vh"}}>
         {musicArray ? (
           musicArray.map((song, index) => (
-            <div className="" style={{ width: "25vw" }}>
+            <div className="shadow-sm" style={{ width: "25vw" }}>
               <li
                 className={`list-group-item ${
                   song.id === videoTest.id && "active"

@@ -5,7 +5,7 @@
 .navbar {
     font-family: "pf-venue", sans-serif;
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 p {
@@ -14,9 +14,9 @@ p {
     font-style: normal;
   }
 
-  h1, h2, h3, h4, h4, h6 {
+  h1, h2, h3, h4, h4, h6, list-group {
     font-family: "pf-venue", sans-serif;
-    font-weight: 900;
+    font-weight: 700;
     font-style: normal;
   }
 
@@ -38,6 +38,10 @@ p {
   width: 600px;
   height: 100px;
   display: flex;
+  max-height:150px ;
+  margin-top: 20px;
+  margin-right: 200px;
+  
 }
 
 footer {
@@ -50,9 +54,13 @@ footer {
 
 .footer-content {
   padding-left: 90px ;
-  margin-top: 10px;
+  padding-right: 20px;
+  margin-top: 20px;
   margin-bottom: 50px;
-  color:rgb(80, 117, 228)
+  color:rgb(80, 117, 228);
+  margin-right: 200px;
+
+  
  }
 .social-media{
   padding-left: 150px;

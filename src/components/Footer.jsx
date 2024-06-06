@@ -12,7 +12,7 @@ function Footer() {
        <img src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/arcade-fast-game-over_w8nqdr.gif" className="img-fluid"  alt="F-img" />
    
      
-        <div className="footer-content" style={{height: '100px'}} >
+        <div className="footer-content" style={{height: "70px", color:"#4b0082"}} >
           <h3>Contact us:</h3>
           <p>Email:Terrorfriends@gmail.com</p>
           <p>Phone:723-780-3903</p>
@@ -23,8 +23,8 @@ function Footer() {
         <div className="footer-content">
            
     
-          <h3 className='follow-us'>Follow Us:</h3>
-          <ul className="social-media">
+          <h3 className='follow-us' style={{color:"#4b0082"}}>Follow Us:</h3>
+          <ul className="social-media d-flex">
              <Link to= "https://www.youtube.com/watch?v=xvFZjo5PgG0" target="blank">  
             <img src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/logo-black_nvbkev.png" className="T-logo"  alt="T-img" />
             </Link>

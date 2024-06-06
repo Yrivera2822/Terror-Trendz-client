@@ -35,7 +35,7 @@ function Hats() {
             return (
               <div key={i}>
                 <div
-                  className="card m-3 p-3"
+                  className="card m-3 p-3  shadow-sm"
                   style={{ width: "24rem", height: "auto" }}
                 >
                   <div className="card-body">
@@ -45,11 +45,11 @@ function Hats() {
                       style={{ height: "20rem" }}
                       alt={"image of" + hat.title}
                     />
-                    <h2 className="card-title mt-2">{hat.title}</h2>
-                    <h6 className="card-subtitle mb-3 text-muted">
+                    <h2 className="card-title mt-2 text-bg-danger ps-3">{hat.title}</h2>
+                    <h5 className="card-subtitle ps-3 mb-3">
                       {hat.description}
-                    </h6>
-                    <h4 className="card-text"> ${hat.price}</h4>
+                    </h5>
+                    <h3 className="card-text ps-3"> ${hat.price}</h3>
                   </div>
                 </div>
               </div>

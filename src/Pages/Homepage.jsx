@@ -66,7 +66,7 @@ function Homepage() {
     {/* <img src="src\assets\lib\terror-background.jpg" /> */}
     
     <div className='footer-top'> 
-          <p>JOIN THE TERROR CLUB NOW</p> 
+          <p style={{paddingLeft: "70px", fontSize: "20px"}}>JOIN THE TERROR CLUB NOW</p> 
         </div>
 
     </div>
