@@ -62,6 +62,7 @@ function EditMusic({ song, index, getMusic }) {
         data-bs-target={"#editForm" + index}
         aria-controls={"#editForm" + index}
         aria-expanded="false"
+        style={{height:"3vh"}}
       >
         Edit{" "}
       </button>
@@ -120,7 +121,7 @@ function EditMusic({ song, index, getMusic }) {
 
           <div>
             {" "}
-            <button type="submit" className="btn btn-outline-primary gap-5 m-1">
+            <button type="submit" className="btn btn-outline-primary gap-5 m-1" style={{height:"3vh"}}>
               Submit Edit
             </button>
           </div>

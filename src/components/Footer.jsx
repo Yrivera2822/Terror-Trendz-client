@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <footer className="bg-warning fixed-bottom">
+    <footer className="bg-warning">
         {/* <div className='footer-top'> 
           <p>JOIN THE TERROR CLUB NOW</p> 
         </div> */}

@@ -96,8 +96,8 @@ function AddMusic() {
     <div className=" p-5">
       {videoTest && (
         <ReactPlayer
-          width="40vw"
-          height="20vw"
+          width="25vw"
+          height="15vw"
           url={videoTest.youTubeUrl}
           controls
           muted
@@ -105,7 +105,7 @@ function AddMusic() {
         />
       )}
 
-      <form onSubmit={handleSubmit} className="p-1" style={{ width: "40vw" }}>
+      <form onSubmit={handleSubmit} className="p-1" style={{ width: "25vw" }}>
         <div className="mb-1">
           <label for="artistName" className="form-label"></label>
           <input
@@ -158,10 +158,10 @@ function AddMusic() {
         </div>
       </form>
       <h2>Music List</h2>
-      <ul className="list-group overflow-auto">
+      <ul className="list-group overflow-y-scroll" style={{height:"20vh"}}>
         {musicArray ? (
           musicArray.map((song, index) => (
-            <div className="" style={{ width: "40vw" }}>
+            <div className="" style={{ width: "25vw" }}>
               <li
                 className={`list-group-item ${
                   song.id === videoTest.id && "active"
@@ -174,6 +174,7 @@ function AddMusic() {
                 <span
                   className="btn btn-danger gap-5 m-1"
                   onClick={() => handleDeleteVideo(song.id, song.songTitle)}
+                  style={{height:"3vh"}}
                 > Delete Video
                 </span>
               </li>
