@@ -34,7 +34,7 @@ function Footer() {
             </Link>
 
             <Link to="https://www.facebook.com/people/Terror-Trendz/100088390365188/" target="blank" alt= "T-img">
-            <img src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/Facebook_Logo_Secondary_esdv44.png" className="T-logo"  alt="T-img" />
+            <img src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717702955/Facebook_Logo_Secondary_eib83f.png" className="T-logo"  alt="T-img" />
             </Link>
            
 
