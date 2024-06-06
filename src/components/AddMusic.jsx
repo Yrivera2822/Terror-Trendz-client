@@ -98,7 +98,7 @@ function AddMusic() {
         <ReactPlayer url={videoTest.youTubeUrl} controls muted playing />
       )}
 
-      <form onSubmit={handleSubmit} className="p-1" style={{ width: "25vw" }}>
+      <form onSubmit={handleSubmit} className="p-1" style={{ width: "30vw" }}>
         <div className="mb-1">
           <label for="artistName" className="form-label"></label>
           <input
@@ -154,7 +154,7 @@ function AddMusic() {
       <ul className="list-group container-sm">
         {musicArray ? (
           musicArray.map((song, index) => (
-            <div className="" style={{ width: "25vw" }}>
+            <div className="" style={{ width: "30vw" }}>
               <li
                 className={`list-group-item ${
                   song.id === videoTest.id && "active"
