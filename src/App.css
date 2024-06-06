@@ -5,13 +5,13 @@
 }
 
 p {
-    font-family: sans-serif;
-    font-weight: 900;
+    font-family: "pf-venue", sans-serif;
+    font-weight: 400;
     font-style: normal;
   }
 
   h1 {
-    font-family: sans-serif;
+    font-family: "pf-venue", sans-serif;
     font-weight: 900;
     font-style: normal;
   }
