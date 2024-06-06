@@ -31,7 +31,7 @@ function Tshirts() {
 
   return (
     <>
-      <div className=" d-inline-flex flex-wrap align-items-left p-2">
+      <div className=" d-inline-flex flex-wrap align-items-left p-5 m-5">
         {tshirts &&
           tshirts.map((tshirt, i) => {
             return (
@@ -51,7 +51,7 @@ function Tshirts() {
                     <h6 className="card-subtitle mb-3 text-muted">
                       {tshirt.description}
                     </h6>
-                    <h4 className="card-text">Price: ${tshirt.price}</h4>
+                    <h4 className="card-text">${tshirt.price}</h4>
                   </div>
                 </div>
               </div>

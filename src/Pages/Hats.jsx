@@ -29,8 +29,7 @@ function Hats() {
 
   return (
     <>
-      <h1 className=" p-5 text-left">Hats</h1>
-      <div className="d-inline-flex flex-wrap p-2">
+      <div className="d-inline-flex flex-wrap  align-items-left p-5 m-5">
         {hats &&
           hats.map((hat, i) => {
             return (
@@ -50,7 +49,7 @@ function Hats() {
                     <h6 className="card-subtitle mb-3 text-muted">
                       {hat.description}
                     </h6>
-                    <h4 className="card-text">Price: ${hat.price}</h4>
+                    <h4 className="card-text"> ${hat.price}</h4>
                   </div>
                 </div>
               </div>
