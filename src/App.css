@@ -39,7 +39,7 @@ p {
   height: 100px;
   display: flex;
   max-height:150px ;
-  margin-top: 20px;
+  margin-top: 35px;
   margin-right: 200px;
   
 }
@@ -56,9 +56,10 @@ footer {
   padding-left: 90px ;
   padding-right: 20px;
   margin-top: 20px;
-  margin-bottom: 50px;
+padding-bottom: 100px;
   color:rgb(80, 117, 228);
   margin-right: 200px;
+  ;
 
   
  }
@@ -66,7 +67,7 @@ footer {
   padding-left: 150px;
 }
 .T-logo{
-  height: 50px;
+  height: 100px;
   margin-top: 20px;
   margin-right: 50px;
 }
