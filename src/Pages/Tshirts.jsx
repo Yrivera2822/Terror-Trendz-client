@@ -43,7 +43,7 @@ function Tshirts() {
                   <div className="card-body">
                     <img
                       src={tshirt.url}
-                      className="object-fit-contain"
+                      className="card-img-top npm w-lg-75 w-md-50 w-100"
                       style={{ height: "20rem" }}
                       alt={"image of" + tshirt.title}
                     />
