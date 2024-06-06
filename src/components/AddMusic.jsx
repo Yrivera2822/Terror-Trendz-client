@@ -97,7 +97,7 @@ function AddMusic() {
       {videoTest && (
         <ReactPlayer
           width="35vw"
-          height="20vw"
+          height="15vw"
           url={videoTest.youTubeUrl}
           controls
           muted
