@@ -55,7 +55,7 @@ function Navbar() {
                   Products
                 </a>
                 <ul
-                  className="dropdown-menu "
+                  className="dropdown-menu shadow-sm" 
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <li>
@@ -70,7 +70,7 @@ function Navbar() {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item  " href="#">
+              <li className="nav-item" href="#">
                 <Link
                   className="nav-link active ps-5"
                   style={{ color: "#4b0082" }}

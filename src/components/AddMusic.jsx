@@ -1,4 +1,4 @@
-import ReactPlayer from "react-player/youtube";
+import ReactPlayer from "react-player/lazy";
 import { useState, useEffect, useNavigate } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -93,19 +93,20 @@ function AddMusic() {
   };
 
   return (
-    <div className="p-5">
+    <div className="p-5 shadow-sm">
       {videoTest && (
         <ReactPlayer
-          width="25vw"
-          height="15vw"
+          width="35vw"
+          height="20vw"
           url={videoTest.youTubeUrl}
           controls
           muted
           playing
+          playIcon
         />
       )}
 
-      <form onSubmit={handleSubmit} className="p-1 " style={{ width: "25vw" }}>
+      <form onSubmit={handleSubmit} className="p-1 " style={{ width: "35vw" }}>
         <div className="mb-1">
           <label for="artistName" className="form-label shadow-sm"></label>
           <input
@@ -158,10 +159,13 @@ function AddMusic() {
         </div>
       </form>
       <h2>Music List</h2>
-      <ul className="list-group overflow-y-scroll " style={{height:"20vh"}}>
+      <ul
+        className="list-group overflow-y-scroll justify-content-start"
+        style={{ height: "20vh" }}
+      >
         {musicArray ? (
           musicArray.map((song, index) => (
-            <div className="shadow-sm" style={{ width: "25vw" }}>
+            <div className="shadow-sm" style={{ width: "35vw" }}>
               <li
                 className={`list-group-item ${
                   song.id === videoTest.id && "active"
@@ -174,8 +178,10 @@ function AddMusic() {
                 <span
                   className="btn btn-danger gap-5 m-1"
                   onClick={() => handleDeleteVideo(song.id, song.songTitle)}
-                  style={{height:"3vh"}}
-                > Delete Video
+                  style={{ height: "3vh" }}
+                >
+                  {" "}
+                  Delete Video
                 </span>
               </li>
             </div>

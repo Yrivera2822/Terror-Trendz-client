@@ -14,8 +14,8 @@ function Footer() {
      
         <div className="footer-content" style={{height: "70px", color:"#4b0082"}} >
           <h3>Contact us:</h3>
-          <p>Email:Terrorfriends@gmail.com</p>
-          <p>Phone:723-780-3903</p>
+          <p>Email: Terrorfriends@gmail.com</p>
+          <p>Phone: 723-780-3903</p>
           <p>1601 Apt #201 Ave Fernandez Juncos San Juan PR.</p>
         </div>
 
