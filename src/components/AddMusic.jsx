@@ -1,7 +1,7 @@
 import ReactPlayer from "react-player/lazy";
 import { useState, useEffect, useNavigate } from "react";
 import axios from "axios";
-import toast from "react-hot-toast";
+import toast, {Toaster} from "react-hot-toast";
 import EditMusic from "./EditMusic";
 
 function AddMusic() {
@@ -176,7 +176,7 @@ function AddMusic() {
                 <span>{song.songTitle}</span>
                 <EditMusic song={song} index={index} getMusic={getMusic} />
                 <span
-                  className="btn btn-danger gap-5 m-1"
+                  className="btn btn-danger gap-5 m-1 align-content-center"
                   onClick={() => handleDeleteVideo(song.id, song.songTitle)}
                   style={{ height: "3vh" }}
                 >
