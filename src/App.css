@@ -14,7 +14,7 @@ p {
     font-style: normal;
   }
 
-  h1, h3, h4, h4, h6 {
+  h1, h2, h3, h4, h4, h6 {
     font-family: "pf-venue", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -35,8 +35,9 @@ p {
 }
 
 .img-fluid {
-  width: 500px;
-  height: 300px;
+  width: 600px;
+  height: 100px;
+  display: flex;
 }
 
 footer {
@@ -74,9 +75,10 @@ footer {
 
 .background{
 background-image: url("https://res.cloudinary.com/dlbhhobaw/image/upload/v1717622101/Terror-Background_jdtcwt.jpg") ;
-background-size: contain;
-max-height: 2000px;
-background-color: lightyellow !important;
+background-size: cover;
+max-height: 1288px;
+max-width: 2600px;
+background-color: #F4F8F6 !important;
 
 }
 

@@ -57,18 +57,18 @@ function EditMusic({ song, index, getMusic }) {
     <>
       <button
         type="button"
-        className="btn btn-warning"
+        className="btn btn-outline-primary"
         data-bs-toggle="collapse"
         data-bs-target={"#editForm" + index}
         aria-controls={"#editForm" + index}
         aria-expanded="false"
       >
-        edit{" "}
+        Edit{" "}
       </button>
       <div className="collapse" id={"editForm" + index}>
         <form
           onSubmit={handleEditSubmit}
-          className="p-5 d-flex flex-wrap align-items-left gap-5 "
+          className="p-5 flex-wrap"
         >
           <div className="mb-3">
             <label for="artistName" className="form-label"></label>
@@ -120,7 +120,7 @@ function EditMusic({ song, index, getMusic }) {
 
           <div>
             {" "}
-            <button type="submit" className="btn btn-warning gap-5 m-1">
+            <button type="submit" className="btn btn-outline-primary gap-5 m-1">
               Submit Edit
             </button>
           </div>
