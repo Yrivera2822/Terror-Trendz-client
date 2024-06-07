@@ -8,11 +8,7 @@ function About() {
         <div className="card-body">
           <h1 className="card-title">Yamil Rivera</h1>
           <p className="card-text"></p>
-          <p className="card-text">
-            <small className="text-body-secondary">
-              
-            </small>
-          </p>
+          <h3 className="card-text">@mailmanlegs</h3>
         </div>
       </div>
       <div className="card mb-3 object-fit-sm-contain shadow-sm">
